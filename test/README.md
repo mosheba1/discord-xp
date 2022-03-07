@@ -94,7 +94,7 @@ const target = message.mentions.users.first() || message.author; // Grab the tar
         .setAvatar(target.displayAvatarURL({format: 'png', size: 512}))
         .setCurrentXP(user.xp) // Current User Xp
         .setRequiredXP(Levels.xpFor(user.level + 1)) // We calculate the required Xp for the next level
-        .setRank(user.position) // Position of the user on the leaderboard
+        .setRank(parseInt(user.position))
         .setLevel(user.level) // Current Level of the user
         .setProgressBar("#FFFFFF")
         .setUsername(target.username)
